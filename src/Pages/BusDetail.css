@@ -1,0 +1,91 @@
+.bus-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.bus-seats-layout {
+  height: 50vh;
+  width: 50vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Show 10 seats per column */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bus-seat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.bus-seats{
+  display: contents;
+  width: 50vw;
+  height: 60vh;
+  border: 2px solid green ;
+}
+.bus-seat:hover {
+  background-color: #b0e57c;
+}
+
+.bus-seat.booked {
+  background-color: #ff8080;
+  cursor: not-allowed;
+}
+
+.bus-seat.selected {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+.proceed-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 535px;
+}
+
+.proceed-cancel {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border:solid 1px #333;
+  margin-left: 30px;
+}
+
+.proceed-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Additional Styles for Seat Status */
+.bus-seat.available {
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Seat Status Hover Styles */
+.bus-seat.available:hover {
+  background-color: #b0e57c;
+}
